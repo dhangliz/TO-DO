@@ -82,3 +82,57 @@ body {
   text-decoration: line-through;
   opacity: 0.6;
 }
+
+.task-item span {
+    transition: all 0.3s ease; /* transición suave */
+}
+
+.task-item.completed span {
+    text-decoration: line-through;
+    color: gray; /* opcional para que se vea completado */
+    opacity: 0.7; /* un toque de fade */
+}
+
+/* botones también pueden tener transición al hacer hover */
+.task-item button {
+    margin-left: 5px;
+    transition: all 0.2s ease;
+}
+
+.task-item button:hover {
+    transform: scale(1.1); /* efecto de zoom sutil */
+    background-color: #ddd; /* cambio de fondo */
+    cursor: pointer;
+}
+
+button.danger, button.edit {
+    padding: 5px 10px; /* espacio interno */
+    border: none; /* ya que los colores de fondo definen el estilo */
+    cursor: pointer; /* el puntero cambia para mostrar interactividad */
+    transition: all 0.2s ease; /* suaviza hover, scale, sombra */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* ligera sombra */
+    font-weight: bold; /* que se vea más “botón” */
+}
+
+button.danger:hover, button.edit:hover {
+    transform: scale(1.1); /* efecto zoom sutil */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* sombra más marcada */
+}
+
+button.danger {
+    background-color: #ff4d4d; /* rojo */
+    color: white;
+}
+
+button.danger:hover {
+    background-color: #e04343; /* rojo más oscuro al hacer hover */
+}
+button.edit {
+    background-color: #4f8cff; /* azul */
+    color: white;
+}
+
+button.edit:hover {
+    background-color: #3a6fd6; /* azul más oscuro al hacer hover */
+}
+
